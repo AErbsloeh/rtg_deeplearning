@@ -1,0 +1,14 @@
+[project]
+name = "rtg-deeplearning"
+version = "0.1.0"
+license = "MIT"
+license-files = ["LICENSE"]
+description = "Software for RTG Specialized Course - Deep Learning"
+readme = "README.md"
+requires-python = ">3.12, <=3.14"
+dependencies = [
+    "denspp-offline",
+]
+
+[tool.uv.sources]
+denspp-offline = { git = "https://github.com/es-ude/denspp.offline.git" }
