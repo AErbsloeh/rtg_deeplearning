@@ -10,7 +10,7 @@ Software for RTG Specialized Course - Deep Learning
 To use this software, we recommend to install the following tools:
 - uv package manager ([Link](https://docs.astral.sh/uv/) for installation)
 - VScode ([Link](https://code.visualstudio.com) for Downloading and Installation)
-- Git ([Link]https://git-scm.com/ for Downloading and Installation)
+- Git ([Link](https://git-scm.com/) for Downloading and Installation)
 
 ### Initialisation
 To download the code open a terminal/cmd and navigate to the target directory for example: <br>
