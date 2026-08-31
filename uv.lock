@@ -562,8 +562,8 @@ wheels = [
 
 [[package]]
 name = "denspp-offline"
-version = "0.6.4.dev14+g95931cb18"
-source = { git = "https://github.com/es-ude/denspp.offline.git#95931cb180cb5e9ab0f4c8981e72bc7c4e47a061" }
+version = "0.6.4.dev15+ga073504db"
+source = { git = "https://github.com/es-ude/denspp.offline.git#a073504db8d42fe8a8435fe18968abb29ba553c3" }
 dependencies = [
     { name = "elasticai-creator" },
     { name = "elasticai-explorer" },

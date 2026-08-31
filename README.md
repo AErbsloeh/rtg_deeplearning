@@ -23,4 +23,26 @@ To use the code, you have to initialise the project. Please run the following st
 - After it, please run the ```init_project.py``` file.
 
 ## Build a model
-...
+In order to train a custom-defined model, you need a Python class to run. Here, are the steps to get it:
+1. Generate a new python file in ```src_dnn/models```
+2. Add the imports: ```from torch import Tensor, argmax, flatten, nn```
+3. Add the following code segment for a ```nn.Module```
+```
+# Important notes: Add a custom model name, but it must have a _v<idx> at the end!
+class ModelName_v0(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.model_shape = (1, 28, 28)
+        # Define the model structure
+        self.model = nn.Sequential(
+            nn.Linear(784, 10),
+            ...
+        )
+
+    def forward(self, x: Tensor) -> tuple[Tensor, Tensor]:
+        x = flatten(x, start_dim=1)
+        prob = self.model(x)
+        return prob, argmax(prob, 1)
+```
+4. Select the model with setting the name in the config file
+5. Start training with run ```run_training.py``` file.
