@@ -1,7 +1,7 @@
 from torch import Tensor, argmax, flatten, nn
 
 
-class mnist_rtg_cl_v0(nn.Module):
+class mnist_mlp_cl_v0(nn.Module):
     def __init__(self):
         super().__init__()
         self.model_shape = (1, 28, 28)
@@ -14,3 +14,6 @@ class mnist_rtg_cl_v0(nn.Module):
         x = flatten(x, start_dim=1)
         prob = self.model(x)
         return prob, argmax(prob, 1)
+
+
+
