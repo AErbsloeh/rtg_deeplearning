@@ -35,8 +35,7 @@ class ModelName_v0(nn.Module):
         self.model_shape = (1, 28, 28)
         # Define the model structure
         self.model = nn.Sequential(
-            nn.Linear(784, 10),
-            ...
+            nn.Linear(784, 10)
         )
 
     def forward(self, x: Tensor) -> tuple[Tensor, Tensor]:
@@ -44,5 +43,7 @@ class ModelName_v0(nn.Module):
         prob = self.model(x)
         return prob, argmax(prob, 1)
 ```
-4. Select the model with setting the name in the config file
-5. Start training with run ```run_training.py``` file.
+4. Run the ```run_training.py``` file once in order to generate all config files ther should be a text output that new JSON files are generated and the request to run the python script againt (e.g., adapt and restart)
+5. Leave the generated config files for now and run the ```run_training.py``` again. Here, an example model (``` mnist_rtg_cl_v0 ```) will be deployed and another JSON file should be generated.
+7. Finally, select your model by setting it's name in the ``` ConfigClassifier_MNIST.json ``` config file under ```model_name```.
+8. Start training by runing the ```run_training.py``` file again.
