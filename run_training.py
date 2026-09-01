@@ -1,5 +1,5 @@
 from denspp.offline.dnn import DefaultSettingsTraining, PyTorchTrainer
-from src_dnn.models.mnist import mnist_mlp_cl_v0
+from src_dnn.models.mnist_mlp import mnist_mlp_cl_v0
 
 
 if __name__ == "__main__":
