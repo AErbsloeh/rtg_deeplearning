@@ -62,11 +62,11 @@ Please try to extract the performance (accuracy, overfitting), extract the numbe
 ### 5.1) Exercises using MLPs:
 1. Build and train a simple model with one ```Linear``` layer (768 -> 10). Are any further layers/functions necessary?
 2. Please add an activation function like ```PReLU``` or ```ReLU```.
-3. Please add a second computing block of ```Linear``` and ```PReLU/ReLU``` (768 -> 256 -> 10).
-4. Please add a third computing block of ```Linear``` and ```PReLU/ReLU``` (768 -> 256 -> 96 -> 10).
+3. Please add a second computing block of ```Linear``` and ```PReLU/ReLU``` (784 -> 256 -> 10).
+4. Please add a third computing block of ```Linear``` and ```PReLU/ReLU``` (784 -> 256 -> 96 -> 10).
 5. Please add a ```Dropout``` after the last activation function
 6. Please add a ```BatchNorm1d``` after the first ```Linear``` layer.
-7. Please add a fourth computing block of ```Linear```, ```BatchNorm1d``` and ```PReLU/ReLU``` (768 -> 512 -> 256 -> 96 -> 10).
+7. Please add a fourth computing block of ```Linear```, ```BatchNorm1d``` and ```PReLU/ReLU``` (784 -> 512 -> 256 -> 96 -> 10).
 
 ### 5.2) Exercises using CNNs:
 In this case you need a CNN for feature extraction and a MLP for classification:
