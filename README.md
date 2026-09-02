@@ -24,7 +24,7 @@ To use the code, you have to initialise the project. Please run the following st
 
 ## 4) Building a model
 In order to train a custom-defined model, you need a Python class to run. Here, are the steps to get it:
-1. Generate a new python file in ```src_dnn/models```
+1. Generate a new Python file in ```src_dnn/models```
 2. Add the imports: ```from torch import Tensor, argmax, flatten, nn```
 3. Add the following code segment for a ```nn.Module```
 ```
@@ -72,7 +72,7 @@ Please try to extract the performance (accuracy, overfitting), extract the numbe
 In this case you need a CNN for feature extraction and a MLP for classification:
 Hint: We can talk a ```Conv2d```, the following configuration is given in breakets: (num. filters, kernel size, stride, padding).
 1. Build and train a simple model with one ```Conv2d``` (16, 4, 2, 1) layer, ```ReLU```, and ```LazyLinear``` (10) for classification. Are any further layers/functions necessary?
-2. Please add an activation function like ```MaxPool2d``` layer with (kernel=3, stride=2).
+2. Please add a pooling like ```MaxPool2d``` layer with (kernel=3, stride=2).
 3. Please add a second computing block with ```Conv2d```(64, 3, 1, 0) and ```MaxPool2d``` (2, 1).
 4. Please add a ```BatchNorm2d``` after each ```Conv2d``` layer.
 5. Please add a ```Dropout2d``` (p=15%) before the last Conv2d layer.

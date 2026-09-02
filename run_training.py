@@ -1,12 +1,12 @@
 from denspp.offline.dnn import DefaultSettingsTraining, PyTorchTrainer
-from src_dnn.models.mnist_mlp import mnist_mlp_cl_v0
+from src_dnn.models.mnist_live import mnist_rtg_v0
 
 
 if __name__ == "__main__":
     trainer = PyTorchTrainer(
         use_case="MNIST",
         settings=DefaultSettingsTraining,
-        default_model=mnist_mlp_cl_v0.__name__
+        default_model=mnist_rtg_v0.__name__
     )
     trainer.do_plot_dataset()
     results = trainer.do_training()
